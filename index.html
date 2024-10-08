@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Etiquetas</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <form id="labelForm">
+        <label for="productName">Nombre del Producto:</label>
+        <input type="text" id="productNameInput" name="productName"><br><br>
+
+        <!--<label for="unit">Unidad de Medida:</label>
+        <input type="text" id="unitInput" name="unit"><br><br>-->
+
+        <label for="price">Precio:</label>
+        <input type="text" id="priceInput" name="price"><br><br>
+
+        <label for="plu">PLU:</label>
+        <input type="text" id="pluInput" name="plu"><br><br>
+
+        <label for="pricePerUnit">Precio por Unidad:</label>
+        <input type="text" id="pricePerUnitInput" name="pricePerUnit"><br><br>
+
+        <label for="terms">Términos y Condiciones:</label>
+        <textarea id="termsInput" name="terms"></textarea><br><br>
+
+        <button type="button" onclick="updateLabel()">Actualizar Etiqueta</button>
+    </form>
+
+    <div class="label" id="label" align="center">
+        <img src="img/encab.png">
+        <h1 id="productName"></h1>
+        <!--<p id="unit"></p>-->
+        <p id="price"></p>
+        <p id="plu"></p>
+        <br><br><br>
+        <p id="pricePerUnit"></p>
+        <p id="terms"></p>
+    </div>
+    <button onclick="generatePDF()">Generar PDF</button>
+    <script src="script.js"></script>
+</body>
+</html>
+
